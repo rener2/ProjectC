@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sõnumi detailvaade</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h3>Sõnum</h3>
+
+<form action="#" th:action="@{/}" th:object="${post}" method="post">
+    <table>
+        <tr>
+            <td>Sõnumi ID:</td>
+            <td><input type="text" th:field="*{messageID}" /></td>
+        </tr>
+        <tr>
+            <td>Algdokument:</td>
+            <td><input type="text" th:field="*{originalDocument}" /></td>
+        </tr>
+        <tr>
+            <td>Teenuse nimi:</td>
+            <td><input type="text" th:field="*{serviceName}" /></td>
+        </tr>
+        <tr>
+            <td>Olek:</td>
+            <td><input type="text" th:field="*{status}" /></td>
+        </tr>
+        <tr>
+            <td>Päringu ID:</td>
+            <td><input type="text" th:field="*{inquiryID}" /></td>
+        </tr>
+        <tr>
+            <td>Vastuse ID:</td>
+            <td><input type="text" th:field="*{responseID}" /></td>
+        </tr>
+        <tr>
+            <td>Objekti ID:</td>
+            <td><input type="text" th:field="*{objectID}" /></td>
+        </tr>
+        <tr>
+            <td>Saatmise aeg:</td>
+            <td><input type="text" th:field="*{sendingTime}" /></td>
+        </tr>
+        <tr>
+            <td>MTA koostatud sõnumi xml:</td>
+            <td><input type="text" th:field="*{messageXml}" /></td>
+        </tr>
+        <tr>
+            <td>E-aresti vastuse xml:</td>
+            <td><input type="text" th:field="*{responseXml}" /></td>
+        </tr>
+        <tr>
+            <td>E-aresti vastuse kood:</td>
+            <td><input type="text" th:field="*{seizureResponseCode}" /></td>
+        </tr>
+        <tr>
+            <td>E-aresti vastuse tekst:</td>
+            <td><input type="text" th:field="*{seizureText}" /></td>
+        </tr>
+        <tr>
+            <td>Veakood:</td>
+            <td><input type="text" th:field="*{errorCode}" /></td>
+        </tr>
+        <tr>
+            <td>Veatekst:</td>
+            <td><input type="text" th:field="*{errorText}" /></td>
+        </tr>
+        <tr>
+            <td>Errorstack:</td>
+            <td><input type="text" th:field="*{errorStack}" /></td>
+        </tr>
+
+        <tr>
+            <td>Panga vastuse xml:</td>
+            <td><input type="text" th:field="*{bankResponseXml}" /></td>
+        </tr>
+        <tr>
+            <td>Panga vastuse kood:</td>
+            <td><input type="text" th:field="*{bankResponseCode}" /></td>
+        </tr>
+        <tr>
+            <td>Panga vastuse tekst:</td>
+            <td><input type="text" th:field="*{bankResponseText}" /></td>
+        </tr>
+        <tr>
+            <td>Sisestamise aeg:</td>
+            <td><input type="text" th:field="*{entryTime}" /></td>
+        </tr>
+        <tr>
+            <td>Muutmise aeg:</td>
+            <td><input type="text" th:field="*{editTime}" /></td>
+        </tr>
+        <tr>
+            <td>Isik:</td>
+            <td><input type="text" th:field="*{person}" /></td>
+        </tr>
+        <tr>
+            <td>Saatmise kordi:</td>
+            <td><input type="text" th:field="*{timesSent}" /></td>
+        </tr>
+        <tr>
+        <tr>
+            <td>E-arestist vastatud:</td>
+            <td><input type="text" th:field="*{seizureResponseTime}" /></td>
+        </tr>
+        <tr>
+            <td>Pangavastuse sõnumi ID:</td>
+            <td><input type="text" th:field="*{bankResponseID}" /></td>
+        </tr>
+        <tr>
+            <td>Pangast vastatud:</td>
+            <td><input type="text" th:field="*{bankResponseTime}" /></td>
+        </tr>
+            <td>Koostaja:</td>
+            <td><input type="text" th:field="*{compiler}" /></td>
+        </tr>
+    </table>
+    <tr>
+        <td><input type="submit" name="resend" value="Saada sõnum uuesti"/></td>
+        <td><input type="submit" name="redoXml" value="Koosta uuesti xml ja saada"/></td>
+        <td><input type="submit" name="seizureResponse" value="Loe e-aresti vastus uuesti"/></td>
+        <td><input type="submit" name="bankResponse" value="Loe panga vastus uuesti"/></td>
+        <td><input type="submit" name="resultBack" value="Tagasi"/></td>
+
+    </tr>
+</form>
+
+</body>
+</html>

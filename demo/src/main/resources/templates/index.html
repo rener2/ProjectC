@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sõnumite otsing</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h3>Sõnumite otsing</h3>
+
+<form action="#" th:action="@{/}" th:object="${post}" method="post">
+    <table>
+        <tr>
+            <td>MTA Sõnumi ID:</td>
+            <td><input type="text" th:field="*{messageID}" /></td>
+            <td th:if="${#fields.hasErrors('messageID')}" th:errors="*{messageID}">Content error message</td>
+        </tr>
+        <tr>
+            <td>E-aresti Objekti ID:</td>
+            <td><input type="text" th:field="*{objectID}" /></td>
+            <td th:if="${#fields.hasErrors('objectID')}" th:errors="*{objectID}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Teenuse nimi:</td>
+            <td><input type="text" th:field="*{serviceName}" /></td>
+            <td th:if="${#fields.hasErrors('serviceName')}" th:errors="*{serviceName}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Olek:</td>
+            <td><input type="text" th:field="*{status}" /></td>
+            <td th:if="${#fields.hasErrors('status')}" th:errors="*{status}">Content error message</td>
+        </tr>
+        <tr>
+            <td>E-aresti Päringu ID:</td>
+            <td><input type="text" th:field="*{inquiryID}" /></td>
+            <td th:if="${#fields.hasErrors('inquiryID')}" th:errors="*{inquiryID}">Content error message</td>
+        </tr>
+        <tr>
+            <td>E-aresti vastuse kood:</td>
+            <td><input type="text" th:field="*{seizureResponseCode}" /></td>
+            <td th:if="${#fields.hasErrors('seizureResponseCode')}" th:errors="*{seizureResponseCode}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Panga vastuse kood:</td>
+            <td><input type="text" th:field="*{bankResponseCode}" /></td>
+            <td th:if="${#fields.hasErrors('bankResponseCode')}" th:errors="*{bankResponseCode}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Veakood:</td>
+            <td><input type="text" th:field="*{errorCode}" /></td>
+            <td th:if="${#fields.hasErrors('errorCode')}" th:errors="*{errorCode}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Saatmise aeg:</td>
+            <td><input type="text" th:field="*{sendingTime}" /></td>
+            <td th:if="${#fields.hasErrors('sendingTime')}" th:errors="*{sendingTime}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Sisestamise aeg:</td>
+            <td><input type="text" th:field="*{entryTime}" /></td>
+            <td th:if="${#fields.hasErrors('entryTime')}" th:errors="*{entryTime}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Kliendi kood:</td>
+            <td><input type="text" th:field="*{clientsCode}" /></td>
+            <td th:if="${#fields.hasErrors('clientsCode')}" th:errors="*{clientsCode}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Koostaja:</td>
+            <td><input type="text" th:field="*{compiler}" /></td>
+            <td th:if="${#fields.hasErrors('compiler')}" th:errors="*{compiler}">Content error message</td>
+        </tr>
+        <tr>
+            <td>Algdokument:</td>
+            <td><input type="text" th:field="*{originalDocument}" /></td>
+            <td th:if="${#fields.hasErrors('originalDocument')}" th:errors="*{originalDocument}">Content error message</td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="empty" value="Tühjenda"/></td>
+            <td><input type="submit" name="search" value="Otsi"/></td>
+            <td><input type="submit" name="back" value="Tagasi"/></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

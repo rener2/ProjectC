@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sõnumid</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class = "container">
+    <!--  <div th:if="${not #lists.isEmpty(messages)}">  -->
+          <h2>Sõnumid</h2>
+          <table class = "table table-striped">
+              <tr>
+                  <th>Sõnumi ID</th>
+                  <th>Teenuse nimi</th>
+                  <th>Olek</th>
+                  <th>Objekti ID</th>
+                  <th>Algdokument</th>
+                  <th>Saatmise aeg</th>
+                  <th>Saatmise katseid</th>
+                  <th>E-aresti vastuse kood</th>
+                  <th>Panga vastuse kood</th>
+                  <th>Veakood</th>
+                  <th>Sisestamise aeg</th>
+                  <th>Muutmise aeg</th>
+              </tr>
+              <!--
+              <tr th:each="message : ${messages}">
+                  <td th:text="${message.messageID}"></td>
+                  <td th:text="${message.serviceName}"></td>
+                  <td th:text="${message.status}"></td>
+                  <td th:text="${message.objectID}"></td>
+                  <td th:text="${message.originalDocument}"></td>
+                  <td th:text="${message.sendingTime}"></td>
+                  <td th:text="${message.timesSent}"></td>
+                  <td th:text="${message.seizureResponseCode}"></td>
+                  <td th:text="${message.bankResponseCode}"></td>
+                  <td th:text="${message.errorCode}"></td>
+                  <td th:text="${message.editTime}"></td>
+              </tr>
+              -->
+        </table>
+    <!--   </div>-->
+   </div>
+   </body>
+   </html>
